@@ -23,11 +23,6 @@ const GameBox: React.FC<GameBoxProps> = ({
   // Find user answer for this category
   const userAnswer = userAnswers.find(answer => answer.category === category);
   
-  // Get category label
-  const getCategoryLabel = () => {
-    return category;
-  };
-
   // Handle click on box
   const handleBoxClick = () => {
     onSelect();
@@ -40,7 +35,7 @@ const GameBox: React.FC<GameBoxProps> = ({
       onClick={handleBoxClick}
     >
       <div className="text-center mb-2 font-bold text-gray-800">
-        {getCategoryLabel()}
+        {category}
       </div>
       
       <div className="text-center text-xl font-bold h-8">

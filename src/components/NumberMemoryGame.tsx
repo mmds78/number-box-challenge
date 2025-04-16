@@ -59,7 +59,10 @@ const GameBoard: React.FC = () => {
         ))}
       </div>
       
-      <NumberKeypad selectedCategory={selectedCategory} />
+      <NumberKeypad 
+        selectedCategory={selectedCategory} 
+        onSelectCategory={handleCategorySelect}
+      />
       
       <GameControls />
     </div>
