@@ -1,3 +1,4 @@
+
 // Generate numbers according to the specific conditions for each category
 
 // ALT: Numbers ending in thousands or 500 from 2000 to 42000
@@ -15,8 +16,10 @@ export const generateHNumber = (): number => {
   const base = Math.floor(Math.random() * 37);
   // Decide if it ends in 0 or 5
   const ending = Math.random() < 0.5 ? 0 : 5;
-  // Ensure it's a three-digit number
-  return base * 10 + ending;
+  // Calculate raw number
+  const rawNumber = base * 10 + ending;
+  // Convert to string and pad with leading zeros to ensure 3 digits
+  return parseInt(rawNumber.toString().padStart(3, '0'));
 };
 
 // S: Numbers ending in 0 or 5 from 0 to 500
