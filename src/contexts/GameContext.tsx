@@ -1,7 +1,6 @@
-
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { CategoryType, getRandomCategories, generateNumberForCategory } from '../utils/numberGenerator';
-import { toast } from '@/components/ui/sonner';
+import { toast } from 'sonner';
 
 // Game phases
 export type GamePhase = 'memorize' | 'input' | 'result';
