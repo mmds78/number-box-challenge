@@ -1,4 +1,3 @@
-
 // Generate numbers according to the specific conditions for each category
 
 // ALT: Numbers ending in thousands or 500 from 2000 to 42000
@@ -10,12 +9,13 @@ export const generateALTNumber = (): number => {
   return base * 1000 + ending;
 };
 
-// H: Numbers ending in 0 or 5 from 0 to 360
+// H: Three-digit numbers ending in 0 or 5 from 0 to 360
 export const generateHNumber = (): number => {
-  // Generate random number between 0 and 36
+  // Generate random number between 0 and 36 (to ensure three-digit numbers)
   const base = Math.floor(Math.random() * 37);
   // Decide if it ends in 0 or 5
   const ending = Math.random() < 0.5 ? 0 : 5;
+  // Ensure it's a three-digit number
   return base * 10 + ending;
 };
 
